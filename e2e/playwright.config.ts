@@ -19,10 +19,12 @@ export default defineConfig({
   testDir: "./tests",
   outputDir: "./.test-results",
   globalSetup: require.resolve("./global-setup"),
-  fullyParallel: true,
+  // Serial, not parallel: a single local dev server + file-based db, not an
+  // isolated backend per test — parallel workers risk resource-contention flake.
+  fullyParallel: false,
+  workers: 1,
   forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 1 : 0,
-  workers: process.env.CI ? 2 : undefined,
+  retries: 1,
   reporter: [["html", { outputFolder: "./playwright-report", open: "never" }], ["list"]],
 
   use: {

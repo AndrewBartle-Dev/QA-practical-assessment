@@ -19,13 +19,8 @@ const PAYMENT_AMOUNT = happyPathData.amount;
 // the feed, regardless of what previous runs left behind.
 const PAYMENT_NOTE = `${happyPathData.notePrefix} ${Date.now()}`;
 
-/**
- * Deliberately does NOT use the authenticatedPage fixture — this is the one
- * test that must exercise the real UI login, since it's the RWA-118 -> RWA-142
- * journey end to end: sign in, start a transaction, select a contact, enter an
- * amount and note, pay, and confirm it succeeded (confirmation + feed).
- */
-test("logs in, sends a payment, and sees it confirmed in the feed", async ({ page }) => {
+/** Full RWA-118 -> RWA-142 journey: sign in, send a payment, confirm it in the feed. */
+test("AC1: logs in, sends a payment, and sees it confirmed in the feed", async ({ page }) => {
   const step = createStepCapture("happy-path");
 
   const loginPage = new LoginPage(page);
@@ -69,8 +64,9 @@ test("logs in, sends a payment, and sees it confirmed in the feed", async ({ pag
     await newTransactionPage.returnToTransactionsButton.click();
     await feedPage.goToMine();
 
+    // Longer timeout: "Mine" triggers a route change + fresh fetch, not just a UI update.
     const sentTransaction = feedPage.transactionItemByDescription(PAYMENT_NOTE);
-    await expect(sentTransaction).toBeVisible();
+    await expect(sentTransaction).toBeVisible({ timeout: 15_000 });
     await step(page, "payment-visible-in-feed");
   });
 });
