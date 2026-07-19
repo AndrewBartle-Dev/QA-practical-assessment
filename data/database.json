@@ -11,7 +11,7 @@
       "phoneNumber": "398-225-9900",
       "avatar": "https://api.dicebear.com/9.x/pixel-art/svg?seed=Ted",
       "defaultPrivacyLevel": "public",
-      "balance": 168453,
+      "balance": 165953,
       "createdAt": "2023-03-09T22:26:40.101Z",
       "modifiedAt": "2024-03-07T10:07:57.580Z"
     },
@@ -26,7 +26,7 @@
       "phoneNumber": "410-786-2112",
       "avatar": "https://api.dicebear.com/9.x/pixel-art/svg?seed=Kristian",
       "defaultPrivacyLevel": "private",
-      "balance": 75526,
+      "balance": 78026,
       "createdAt": "2023-04-23T13:52:10.979Z",
       "modifiedAt": "2024-03-07T09:07:46.709Z"
     },
@@ -10035,6 +10035,18 @@
       "status": "complete",
       "createdAt": "2026-07-19T14:44:50.304Z",
       "modifiedAt": "2026-07-19T14:44:50.304Z"
+    },
+    {
+      "id": "UXqL1g9NB",
+      "uuid": "02d69d92-1c14-4bba-955a-482270c5a4c0",
+      "amount": 2500,
+      "description": "Happy path test payment 1784473671933",
+      "receiverId": "GjWovtg2hr",
+      "senderId": "uBmeaz5pX",
+      "privacyLevel": "public",
+      "status": "complete",
+      "createdAt": "2026-07-19T15:07:57.181Z",
+      "modifiedAt": "2026-07-19T15:07:57.181Z"
     }
   ],
   "likes": [
@@ -10761,6 +10773,16 @@
       "isRead": false,
       "createdAt": "2026-07-19T14:44:50.345Z",
       "modifiedAt": "2026-07-19T14:44:50.345Z"
+    },
+    {
+      "id": "-2KFwoK5rh",
+      "uuid": "0c30a3bf-f099-40e9-8061-e4f9a1725d89",
+      "userId": "GjWovtg2hr",
+      "transactionId": "UXqL1g9NB",
+      "status": "received",
+      "isRead": false,
+      "createdAt": "2026-07-19T15:07:57.253Z",
+      "modifiedAt": "2026-07-19T15:07:57.253Z"
     }
   ],
   "banktransfers": [
