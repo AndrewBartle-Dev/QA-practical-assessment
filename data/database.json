@@ -11,7 +11,7 @@
       "phoneNumber": "398-225-9900",
       "avatar": "https://api.dicebear.com/9.x/pixel-art/svg?seed=Ted",
       "defaultPrivacyLevel": "public",
-      "balance": 120953,
+      "balance": 145953,
       "createdAt": "2023-03-09T22:26:40.101Z",
       "modifiedAt": "2024-03-07T10:07:57.580Z"
     },
@@ -26,7 +26,7 @@
       "phoneNumber": "410-786-2112",
       "avatar": "https://api.dicebear.com/9.x/pixel-art/svg?seed=Kristian",
       "defaultPrivacyLevel": "private",
-      "balance": 123026,
+      "balance": 98026,
       "createdAt": "2023-04-23T13:52:10.979Z",
       "modifiedAt": "2024-03-07T09:07:46.709Z"
     },
@@ -9857,16 +9857,28 @@
       "modifiedAt": "2024-03-07T21:58:09.668Z"
     },
     {
-      "id": "rMX-Brkau",
-      "uuid": "dec28d94-94aa-44ad-8bcb-5903b3857635",
-      "amount": 30000,
-      "description": "thanks",
+      "id": "LT5E8f9H6",
+      "uuid": "52fe2cc5-6fb9-401c-b277-b635da04f5c6",
+      "amount": 2500,
+      "description": "Happy path test payment 1784420909887",
       "receiverId": "GjWovtg2hr",
       "senderId": "uBmeaz5pX",
       "privacyLevel": "public",
       "status": "complete",
-      "createdAt": "2026-06-23T00:38:30.648Z",
-      "modifiedAt": "2026-06-23T00:38:30.648Z"
+      "createdAt": "2026-07-19T00:28:32.411Z",
+      "modifiedAt": "2026-07-19T00:28:32.411Z"
+    },
+    {
+      "id": "iyQtNFGWC",
+      "uuid": "3b83af92-b2f6-42ac-98c9-4ba7df640c38",
+      "amount": 2500,
+      "description": "Happy path test payment 1784421174934",
+      "receiverId": "GjWovtg2hr",
+      "senderId": "uBmeaz5pX",
+      "privacyLevel": "public",
+      "status": "complete",
+      "createdAt": "2026-07-19T00:33:01.191Z",
+      "modifiedAt": "2026-07-19T00:33:01.191Z"
     }
   ],
   "likes": [
@@ -10445,14 +10457,24 @@
       "modifiedAt": "2024-03-07T17:13:52.110Z"
     },
     {
-      "id": "hKqgn2Vg9z",
-      "uuid": "39c04ac4-3f88-4bf9-99d0-3897b5ddd69e",
+      "id": "rVGbbbLjLf",
+      "uuid": "29a2d020-5073-43a9-8682-302b333e36d4",
       "userId": "GjWovtg2hr",
-      "transactionId": "rMX-Brkau",
+      "transactionId": "LT5E8f9H6",
       "status": "received",
       "isRead": false,
-      "createdAt": "2026-06-23T00:38:30.664Z",
-      "modifiedAt": "2026-06-23T00:38:30.664Z"
+      "createdAt": "2026-07-19T00:28:32.464Z",
+      "modifiedAt": "2026-07-19T00:28:32.464Z"
+    },
+    {
+      "id": "gWAiWGPGlG",
+      "uuid": "f4a87c19-58a8-49da-ba47-93efb5e781a1",
+      "userId": "GjWovtg2hr",
+      "transactionId": "iyQtNFGWC",
+      "status": "received",
+      "isRead": false,
+      "createdAt": "2026-07-19T00:33:01.284Z",
+      "modifiedAt": "2026-07-19T00:33:01.284Z"
     }
   ],
   "banktransfers": [

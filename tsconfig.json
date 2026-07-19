@@ -16,7 +16,8 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "noFallthroughCasesInSwitch": true,
-    "types": []
+    "types": [],
+    "ignoreDeprecations": "6.0"
   },
   "include": ["scripts", "backend", "src/utils/portUtils.ts"]
 }

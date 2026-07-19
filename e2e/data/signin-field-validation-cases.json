@@ -1,0 +1,12 @@
+[
+  {
+    "label": "empty username",
+    "username": "",
+    "password": "s3cret"
+  },
+  {
+    "label": "password too short",
+    "username": "Heath93",
+    "password": "abc"
+  }
+]

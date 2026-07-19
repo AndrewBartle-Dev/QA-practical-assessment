@@ -35,6 +35,11 @@ amplify-build-config.json
 amplify-gradle-config.json
 amplifytools.xcconfig
 
+# Playwright
+e2e/playwright-report/
+e2e/.test-results/
+e2e/.auth/
+
 # Yarn
 # See https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
 # without zero installs

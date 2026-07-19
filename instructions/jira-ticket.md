@@ -94,3 +94,112 @@ And the payment is not shown in the third user's "Mine" or "Friends" feed
 - [ ] Automated coverage added (UI happy path + API contract for `POST /transactions`)
 - [ ] No regression in transaction feeds or notifications
 - [ ] Accessibility: amount/note inputs and Pay button are keyboard-navigable and labeled
+
+
+## QA Annotations
+
+### AC1 — Happy Path: Send a Payment
+
+**Risk / Priority:** High — Core money movement workflow; prioritize.
+
+**Test Type:** Automated UI, API, Contract
+
+**Data Dependencies:**
+- Authenticated sender
+- Linked bank account
+- Valid recipient
+- Known starting account balance
+
+**Observations:**
+- The expected contents of the confirmation screen are not fully defined.
+- Verify the `POST /transactions` request and response at the API layer rather than relying only on the UI.
+- Stable test IDs are needed for the contact search result, amount input, note input, **Pay** button, confirmation state, and transaction row.
+
+---
+
+### AC2 — Receiver Is Notified and Sees the Transaction
+
+**Risk / Priority:** High — Verifies transaction data across two users, balances, feeds, and notifications.
+
+**Test Type:** Manual, Automated UI, API
+
+**Data Dependencies:**
+- Completed payment
+- Receiver account
+- Known receiver starting balance
+
+**Observations:**
+- The expected notification contents are not defined.
+- Verify the receiver's balance and transaction record at the API layer rather than relying only on the UI.
+- Stable test IDs are needed for the notification and incoming transaction row.
+
+---
+
+### AC3 — Amount Validation
+
+**Risk / Priority:** High — Incorrect validation could allow invalid money movement; prioritize negative coverage.
+
+**Test Type:** Automated UI, API
+
+**Data Dependencies:**
+- Authenticated sender
+- Linked bank account
+- Selected recipient
+
+**Observations:**
+- The phrase **"valid positive amount"** does not define the complete range of valid values.
+- Verify the same validation rules at the API layer so they cannot be bypassed through direct requests.
+- Stable test IDs are needed for the amount input and **Pay** button.
+
+---
+
+### AC4 — Contact Is Required
+
+**Risk / Priority:** Medium — Prevents transactions from being created without a recipient.
+
+**Test Type:** Automated UI
+
+**Data Dependencies:**
+- Authenticated sender
+- Linked bank account
+- No contact selected
+
+**Observations:**
+- The acceptance criterion is objective and testable as written.
+- Stable test IDs are needed for the contact search results and the control used to continue to the amount step.
+
+---
+
+### AC5 — Note Is Optional
+
+**Risk / Priority:** Low — Optional field behavior.
+
+**Test Type:** Automated UI, API
+
+**Data Dependencies:**
+- Authenticated sender
+- Selected recipient
+- Valid payment amount
+- Empty note
+
+**Observations:**
+- Verify at the API layer that the transaction is created without a note.
+- Stable test IDs are needed for the note input and completed transaction row.
+
+---
+
+### AC6 — Feed Privacy
+
+**Risk / Priority:** High — Privacy and unintended data exposure; prioritize.
+
+**Test Type:** Manual, Automated UI, API
+
+**Data Dependencies:**
+- Completed public payment
+- Sender and receiver
+- Unrelated third user
+
+**Observations:**
+- The public visibility setup and referenced privacy rules are not defined.
+- Verify at the API layer that the exact amount is not returned to an unrelated user rather than only confirming the UI hides it.
+- Stable test IDs are needed for the feed tabs and transaction entries.

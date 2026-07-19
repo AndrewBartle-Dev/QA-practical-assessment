@@ -1,0 +1,17 @@
+[
+  {
+    "label": "zero amount",
+    "value": "0",
+    "expectPayDisabled": false
+  },
+  {
+    "label": "negative amount",
+    "value": "-25",
+    "expectPayDisabled": false
+  },
+  {
+    "label": "empty amount",
+    "value": "",
+    "expectPayDisabled": true
+  }
+]

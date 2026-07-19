@@ -1,0 +1,12 @@
+[
+  {
+    "label": "wrong password",
+    "username": "Heath93",
+    "password": "not-the-right-password"
+  },
+  {
+    "label": "unknown username",
+    "username": "not-a-real-seeded-user",
+    "password": "s3cret"
+  }
+]
